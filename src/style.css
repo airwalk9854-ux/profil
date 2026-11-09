@@ -184,3 +184,104 @@ h2 { margin: 0; color: #fff; font-size: 40px; font-weight: 600; letter-spacing: 
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal-on-scroll { opacity: 1; transform: none; }
 }
+
+/* 밝은 한지 바탕과 단청에서 가져온 절제된 색을 더합니다. */
+:root {
+  --ink: #332b25;
+  --muted: #62584e;
+  --dim: #84776b;
+  --blue: #277a79;
+  --purple: #8d6646;
+  --pink: #b34d3d;
+  --line: rgb(111 87 61 / 19%);
+  --panel: rgb(255 253 246 / 86%);
+  color: var(--ink);
+  background: #f5f0e4;
+  font-family: 'Space Grotesk', 'Malgun Gothic', sans-serif;
+}
+
+html, body { overflow-x: clip; }
+body { position: relative; isolation: isolate; color: var(--ink); background: linear-gradient(145deg, #fbf8ef, #f2ead9 58%, #f8f4e9); }
+body::before {
+  z-index: -1;
+  background: radial-gradient(ellipse at 14% 9%, rgb(210 167 104 / 15%), transparent 35%), radial-gradient(ellipse at 90% 38%, rgb(82 145 131 / 10%), transparent 32%);
+}
+body::after {
+  z-index: -1;
+  opacity: .34;
+  background-image: radial-gradient(ellipse at center, transparent 55%, #9c7954 56%, transparent 60%), radial-gradient(ellipse at center, transparent 55%, #9c7954 56%, transparent 60%);
+  background-size: 54px 30px;
+  background-position: 0 0, 27px 15px;
+  mask-image: linear-gradient(to bottom, black, transparent 55%);
+}
+.topbar { background: rgb(250 247 238 / 92%); backdrop-filter: blur(12px); }
+.wordmark { color: var(--ink); text-shadow: none; }
+.topbar nav a, .intro-description, .text-link, .section-caption, .item-title,
+.info-list dd, .footer-email { color: #51483f; }
+.contact-link { color: #3b574f; background: rgb(76 132 116 / 8%); box-shadow: none; }
+.intro { border-color: var(--line); }
+.intro::before { background: radial-gradient(ellipse, rgb(189 146 83 / 13%), transparent 68%); }
+.eyebrow { font-family: 'Malgun Gothic', sans-serif; font-size: 12px; letter-spacing: 0; }
+.eyebrow-dot { border-radius: 0; background: var(--pink); box-shadow: none; transform: rotate(45deg); }
+h1 span { color: #397f78; background: none; filter: none; }
+.text-link { border-color: rgb(39 122 121 / 46%); }
+.intro-art::before { border-color: rgb(39 122 121 / 26%); box-shadow: inset 0 0 0 12px rgb(179 77 61 / 4%); }
+.intro-art::after { border-color: rgb(179 77 61 / 28%); }
+.art-orbit { border-color: rgb(179 77 61 / 30%); }
+.art-sun { border-color: rgb(39 122 121 / 32%); background: radial-gradient(circle at 32% 26%, #ead7ad, #d6b77e 62%, #c99e68); box-shadow: 0 0 45px rgb(189 146 83 / 18%), inset 0 0 30px rgb(255 250 227 / 65%); }
+.art-sun::before { border-color: rgb(179 77 61 / 28%); }
+.art-sun::after { background: linear-gradient(90deg, transparent, var(--blue), var(--pink), transparent); box-shadow: none; }
+.art-card { border-color: rgb(111 87 61 / 28%); backdrop-filter: blur(10px); box-shadow: 0 18px 42px rgb(80 61 39 / 14%); }
+.card-back { color: #f9f4e8; background: linear-gradient(145deg, #527f73, #826447); }
+.card-back i { color: #fff8df; text-shadow: none; }
+.card-front { color: #3a3028; background: linear-gradient(145deg, #fffdf6, #eee3cb); }
+.card-front > span, .art-note { color: #8b4c3b; text-shadow: none; }
+.art-note { font-size: 12px; }
+.art-star { color: var(--pink); text-shadow: none; }
+.intro-index { color: #75685b; font-family: 'Malgun Gothic', sans-serif; letter-spacing: 0; }
+h2 { color: var(--ink); }
+.profile-grid { border-color: var(--line); background: rgb(255 253 247 / 76%); box-shadow: 0 20px 55px rgb(80 61 39 / 8%); }
+.profile-lead { border-color: var(--line); background: radial-gradient(ellipse at 0 100%, rgb(210 167 104 / 19%), transparent 64%); }
+.lead-mark { color: var(--pink); text-shadow: none; }
+.profile-lead p { color: var(--ink); }
+.lead-caption { color: var(--blue); font-family: 'Malgun Gothic', sans-serif; letter-spacing: 0; }
+.info-list div { border-color: rgb(111 87 61 / 13%); }
+.info-list dt, .item-year { color: #6f7764; }
+.career-section { border-color: var(--line); background: linear-gradient(100deg, rgb(224 211 181 / 45%), rgb(244 235 215 / 60%), rgb(219 231 219 / 42%)); }
+.timeline, .timeline-item, .programs-section .timeline-item { border-color: rgb(111 87 61 / 20%); }
+.timeline-item:hover { border-color: rgb(39 122 121 / 32%); background: rgb(39 122 121 / 5%); }
+.timeline-item::before { background: var(--pink); box-shadow: none; }
+.programs-section .item-year { color: #8d6646; }
+.footer { border-color: var(--line); }
+.footer p, .footer-copy { color: #75685b; }
+.topbar nav a:hover, .contact-link:hover { color: #236e68; }
+.contact-link:hover { background: rgb(76 132 116 / 16%); box-shadow: 0 5px 18px rgb(39 122 121 / 12%); }
+.text-link:hover { color: #236e68; }
+.info-list a { text-decoration-color: rgb(39 122 121 / 50%); }
+.info-list a span, .contact-link span, .footer-email span { color: var(--blue); }
+.programs-section .timeline { border-color: rgb(179 77 61 / 22%); }
+.programs-section .timeline-item { border-color: rgb(111 87 61 / 20%); }
+.info-list dt { font-size: 15px; }
+.info-list dd { font-size: 16px; line-height: 1.85; }
+.section-caption { font-size: 14px; }
+.item-year { font-size: 13px; }
+.item-title { font-size: 16px; line-height: 1.85; }
+
+@media (max-width: 700px) {
+  .info-list dt { font-size: 14px; }
+  .info-list dd { font-size: 15px; }
+  .section-caption { font-size: 13px; }
+  .item-year { font-size: 12px; }
+  .item-title { font-size: 15px; }
+}
+
+@media (max-width: 430px) {
+  .info-list dt { font-size: 13px; }
+  .info-list dd { font-size: 14px; }
+  .item-year { font-size: 11px; }
+  .item-title { font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-art::after, .art-star { animation: none; }
+}
